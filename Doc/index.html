@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SpringMVC + Hibernate</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+		  <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#maven">Maven(pom.xml)</a>
+            </li>
+			<li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#webxml">web.xml</a>
+            </li>
+			<li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#springxml">spring.xml</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#hibernate">Hibernate</a>
+            </li>
+			<li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#dao">Spring DAO</a>
+            </li>
+			<li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#controller">Controller</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-1 px-0 px-lg-1 rounded js-scroll-trigger" href="#view">View Kullanici</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <h1 class="text-uppercase mb-0">Hibernate + Spring MVC</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">Hibernate alt yapısı ile SpringMVC</h2>
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="maven" id="maven">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Maven Kullanımı(pom.xml)</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p class="lead"><a href="https://github.com/ugrmhmt/SpringMVC/blob/master/pom.xml" class="text-warning">pom.xml</a> isimli bir dosya oluşturup içindeki linkteki içeriği içine kopyalayıp yapıştırıyoruz. Bunlar Apache Maven tarafından projemize dahil edilecek olan kütüphanelerdir.</p>
+          </div>
+		  <div class="col-lg-12 mr-auto">
+            <p class="lead">Burada dikkat edilmesi gereken nokta pom.xml ana dizinde olmalıdır ve eğer siz standart bir web projesi oluşturmuşsanız proje üstünde sağ tıklayayark sırası ile Configure->Convert to Maven Project bu işlemden sonra projeniz için gerekli olan dependency yani gerekli libler indirilecektir otomatik olarak.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="webxml">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">web.xml Kullanımı</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p class="lead"><a href="https://github.com/ugrmhmt/SpringMVC/blob/master/WebContent/WEB-INF/web.xml" class="text-warning">web.xml</a> isminde /WebContent/WEB-INF içerisinde bir xml dosyası oluşturuyoruz.</p>
+          </div>
+		  <div class="col-lg-12 mr-auto">
+            <p class="lead">web.xml için özellikle değiştirmemiz gereken bir bölüm bulunmamaktadır tek dikkat etmeniz gereken 15. satırdaki spring.xml dosyasının bulunduğu dizindir veya verdiğiniz farklı bir isim var ise bu isimi de onunla değiştirmelisiniz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="springxml">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">spring.xml Dosyası</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p class="lead">WebContent/WEB-INF altında <a href="https://github.com/ugrmhmt/SpringMVC/blob/master/WebContent/WEB-INF/spring.xml" style="color:#FF0;">spring.xml</a> adında bir xml dosyası oluşturuyoruz ve linkteki dosyayı aynen kopyalayıp yapıştırıyoruz.</p>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead"><span class="text-danger">context:component-scan base-package="com.springmvc"</span> kısmında springe ait controller, model, dao'ların bulunduğu paket adını veriyoruz.</p>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead"><span class="text-danger">mvc:resources mapping="/resources/**" location="/resources/"</span> kısmında css,js gibi stil dosyalarımızı tutacağımız resource dosyamızı belirtiyoruz.</p>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead"><span class="text-danger">class="org.springframework.web.servlet.view.InternalResourceViewResolver"</span> kısmında viewlarımızın olacağı klasörü belirliyoruz ve viewlarımızın uzantısını belirliyoruz.</p>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead"><span class="text-danger">id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"</span> altında mysql bilgilerimizi belirliyoruz.</p>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead"><span class="text-danger">id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"</span> sessionFactory oluşturuyoruz ve modellerimizin olduğu paketi belirtiyoruz. name="packagesToScan" value="com.springmvc.entity" bu kısım modellerimizi tuttuğumuz klasör.<br>
+				<span class="text-danger">org.hibernate.dialect.MySQL55Dialect</span> InnoDB bağlantısı için (ilişkili tablolar için innodb kullanmalısınız)
+			</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section class="bg-primary text-white mb-0" id="hibernate">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Hibernate</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+				<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/entity/Kullanici.java"><img class="img-fluid" src="spring/kullanici.png" alt=""></a>
+		    </div>
+		  <div class="col-lg-12 mr-auto">
+            <p class="lead">Hibernate ile tablolarımızı oluşturmak içn model class'larımızı oluşturuyoruz burada 1 adet tablo için resimde gösterildiği gibi private olarak kolonlarımızı açıyoruz.</p>
+			<p class="lead"><span class="text-warning">@Id </span> bu notasyon bu kolonun id kolonu olduğunu belirtir.</p>
+			<p class="lead"><span class="text-warning">@GeneratedValue </span> bu notasyon bu kolonun artan bir değer alarak otomatik ilerlemesini belirtir.</p>
+			<p class="lead"><span class="text-warning">@Column </span> bu notasyon database'deki kolon adlarına verilecek isimler(olmaması halinde verilen değişken adını alır).</p>
+			<p class="lead"><span class="text-warning">@NotEmpty </span> bu notasyon bu kolonun boş geçilemeyeceğini belirtir içindeki mesaj ise boş geçildiğinde validasyon olarak dönecek mesajı belirtir.</p>
+			<p class="lead"><span class="text-warning">@Size </span> bu notasyon bu kolonun aralığını belirler.</p>
+			<p class="lead">Burada olduşturulan class paketler altında com.springmvc.entity altında oluşturulmuştur hibernate kullanımına verilecek olan kısımda yani spring.xml de belirttiğimiz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section id="dao">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">DAO(Data Access Object)</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/dao/Base/GenericDAO.java"><img class="img-fluid" src="spring/dao_interface.png" alt=""></a>
+		  </div>
+		  <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/dao/Base/GenericDaoImpl.java"><img class="img-fluid" src="spring/daogeneric.png" alt=""></a>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead">Burada kullanılan sistem 1 den fazla tablo olması senaryosu üzerine kodlanmıştır. Yani her bir tablo(entity için) yeniden bir implementasyon ve interface kodlanmaması için 1 defa generic olarak tasarlanarak. Sadece bu sınıf kalıtım alınmıştır. Abstract'bir bir classdır istenildiğinde bir üst sınıf tarafından override edilebilir.</p>
+			<p class="text-danger">Burada kullanılan methodların içerisinde save, update vs. işlemler hibernate üzerinden aldığımız sessionFactory ile işlenmektedir. Buradaki fonksiyonlar hibernate'in bize sağladığı fonksiyonlardır.</p>
+          </div>
+		  <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/dao/KullaniciDAO.java"><img class="img-fluid" src="spring/kullanici_dao_interface.png" alt=""></a>
+		  </div>
+		  <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/dao/KullaniciDAOImp.java"><img class="img-fluid" src="spring/kullanici_dao.png" alt=""></a>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead">Burada hem kullanici hemde generic sınıflarına bakıldığında classlara(implementasyonlara) notasyon olarak Repository verildiği atlanılmamalıdır.</p>
+			<p class="lead">Üstteki iki resimde de birisi interface diğeri imp olmak üzere her ikiside generic sınıfımızdan kalıtım alarak oradaki methodları kullanabilir duruma getirilmişlerdir</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section class="bg-primary text-white mb-0" id="controller">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Controller</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+				<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/src/com/springmvc/controller/KullaniciController.java"><img class="img-fluid" src="spring/controller.png" alt=""></a>
+		    </div>
+		  <div class="col-lg-12 mr-auto">
+            <p class="lead">Controller'ımızda 4 temel işlem bulunmaktadır (CRUD işlemleri).</p>
+			<p class="lead"><span class="text-warning">@Autowired </span> bu notasyon bir interface kabul eder ve bu interface'den implemente edilmiş class'ı kendisine bir örneğini oluşturarak kullanımıza sunmaktadır. Aynı işlem generic sınfıta da yapılmıştır.</p>
+			<p class="lead"><span class="text-warning">@GetMapping("/add") </span> bu notasyon ile ekleme işlemi için dönülecek olan sayfa ve referans alınacak nesneyi view aracılığı ile gönderiyoruz.</p>
+			<p class="lead"><span class="text-warning">@PostMapping("/add") </span> bu notasyon ile post işlemi geldiğinde yakalıyoruz Valid ile hata var ise sorgulayıp var ise BindingResult içine atıyoruz hataları hatalar hibernate'de belirttiğimiz hataladır. Boş gelmesi gelemesi, büyüklük gibi.</p>
+			<p class="lead"><span class="text-warning">@GetMapping(value="/delete{id}") </span> bu notasyon delete sayfasına gelen değerlerden bir id değeri yakalar (/delete?id=1 gibi) id yakalar ve bize verir hibernate ile find işlemi yaparak var ise sileriz.</p>
+			<p class="lead"><span class="text-warning">@GetMapping(value="/edit{id}") </span> bu notasyon yine id değeri yakalar ve yakaladığı id değerini sorgular var ise geriye add view sayası içerisinde bu nesneyi dönecektir bulamazsa listeleme sayfasına atar. Burada dikkat edilmesi gereken olay edit için tekrar post işlemi yazmadık ve direkt olarak add kullandık add isteğinde gelen id değeri boş değilse ise bunun bir güncelleme işlemi olduğunu anlayacak ve direkt olarak güncelleme yapacaktır. Aksi durumda ekleme işlemi yapacaktır.</p>
+			<p class="lead"><span class="text-warning">@GetMapping({"/list"}) </span> u nostasyon ile database'deki bütün nesneler çekilecektir hibernate yardımı ile ve model içine eklenerek view sayfasında görüntülekecektir.</p>
+			<h3 class="text-center text-uppercase text-white">Önemli Kısımlar</h3>
+			<p class="lead">Bütün nesnelerin parametrelerinde <span class="text-warning">Model</span> tipinde nesne olduğunu görmektesiniz. Bu nesne bizim view sayfamıza göndereceğimiz değerleri tutturacağımız yardımcı bir nesne olacaktır. Verdiğimiz isim ile view sayfamızda bu değerleri yakalacağız.</p>
+			<p class="lead">Diğer bir önemli husus ise bazı nostasyonlarda <span class="text-warning">{}</span> var iken bazılarında yoktur. Süslü parantez ile gelen 1 den fazla isteği aynı method ile yakalamak istersek kullanabiliriz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	<section id="view">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">View Page</h2>
+        <hr class="star-dark mb-5">
+		<div class="col-lg-12 ml-auto">
+            <p class="lead">Burada include'lar ile basit bir master page yapısı yapılmaya çalışılmıştır. Fakat master page yapısı anlatılmayacaktır kodlar incelendiğinde çok kolay olduğunu fark edeceksiniz.</p>
+          </div>
+        <div class="row">
+          <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/WebContent/WEB-INF/view/kullanici/add.jsp"><img class="img-fluid" src="spring/view_add.png" alt=""></a>
+		  </div>
+		  <div class="col-lg-6 ml-auto">
+			<a href="https://github.com/ugrmhmt/SpringMVC/blob/master/WebContent/WEB-INF/view/kullanici/list.jsp"><img class="img-fluid" src="spring/view_list.png" alt=""></a>
+          </div>
+		  <div class="col-lg-12 ml-auto">
+            <p class="lead">Add view page'inde göreceğiniz standart html gibi yazılmamış fakat html gibi yorumlanan yapılar Spring'den gelmektedir. Spring arka tarafta gönderdiğimiz modeli form daki path ile yakalar ve form içerisindeki elemanların path'leri ile de modelin içerisinde fieldları yakalar ve bunları kendi yapısına göre isimlendirir. POST edildiğinde tekrar geri yakalayabilmek için.</p>
+			<p class="lead">form:error elemanı ise geriye dönen bir hata var ise verdiğimiz class ile bunu o div içerisinde içine yazacağını belirtmek için kullanılmaktadır.</p>
+			<p class="lead">Bu sayfa controller tarafından gönderilen model tarafından doldurularak işlem için buton ile tetiklenmesini bekleyecektır.</p>
+            <p class="lead">List sayfasında kullanici adı ile gönderilen model yakalanacak ve <span class="text-warning">http://java.sun.com/jsp/jstl/core</span> buradan gelen <span class="text-warning">c</span> etiketli forEach ile dönülerek ekrana basılacaktır. Gerekli linklendirme vs. işlemleri sonrasında SpringMVC + Hibernate ile CRUD işlemleri tamamlanmış olacaktır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-12 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Hakkında</h4>
+            <p class="lead mb-0">Bu yazı github için bilgilendirme dökümantasyonu olarak hazırlanmıştır. Yazım hataları ve hatalı bilgiler içerdiğini düşünüyorsanız ugrmhmt@gmail.com adresinden mail atarak düzeltilmesini talep edebilirsiniz. Aklınıza takılan sorular için mail atabilirsiniz. 
+              </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; 2018</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+
+</html>
